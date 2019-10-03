@@ -3,31 +3,43 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
+  <header>
+    <nav className="navbar is-dark" style={{ marginBottom:"2em"}}>
+      <div className="navbar-brand">
+          <Link className="has-text-white is-size-3"
+            to="/"
+            style={{
+              marginLeft: "3em",
+              padding: `10px`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+      </div>
+      <div className="navbar-end" style={{ marginRight:"3em"}}>
+        <div className="navbar-item">
+          <Link 
+          className="has-text-white" 
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+          style={{ padding: "10px"}}
+          
+          >
+            Home
+          </Link>
+        </div>
+        <div className="navbar-item">
+          <Link 
+          className="has-text-white" 
+          to="/gallery/"
+          style={{ padding: "10px"}}
+          
+          >
+            Gallery
+          </Link>
+        </div>
+
+      </div>
+    </nav>
   </header>
 )
 
