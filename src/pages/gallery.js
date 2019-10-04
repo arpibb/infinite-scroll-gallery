@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import InfiniteImages from "../components/infiniteImages"
 
 const Gallery = () => (
   <Layout>
@@ -12,6 +13,7 @@ const Gallery = () => (
         Now this is the Law of the Jungle, as old and true as the sky, for as
         long as you keep scrolling, you shall find more doggo images 🐶 🐕.
     </p>
+    <InfiniteImages />
   </Layout>
 )
 

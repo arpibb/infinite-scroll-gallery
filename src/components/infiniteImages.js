@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import InfiniteScroll from "react-infinite-scroll-component"
+import { useState, useEffect } from "react"
+import axios from "axios"
 
 import "./gallery.css"
 
@@ -13,7 +15,7 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
         hasMore={true}
         loader={
           <p style={{ textAlign: "center", marginTop: "1%" }}>
-            More doggo incoming 🐕 🐕...
+            More doggo incoming ...
           </p>
         }
       >
@@ -30,11 +32,6 @@ const ImageGallery = ({ images, loading, fetchImages }) => {
   )
 }
 
-export default ImageGallery
-
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-
 const InfiniteImages = () => {
     // Hold state
     const [images, setImages] = useState([])
@@ -47,7 +44,7 @@ const InfiniteImages = () => {
   
   
       // API endpoint
-      const endpoint = "<Endpoint here once available>"
+    const endpoint = "/.netlify/functions/fetch"
   
       // Fetch Images from functions
     const fetchImages = () => {
